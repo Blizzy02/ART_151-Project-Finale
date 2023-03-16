@@ -1,0 +1,106 @@
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  .image {
+    display: flex;
+    position: absolute; top: 10%; left: 30%;
+  }
+  
+  body {
+    background-color: #000;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container-of-piano {
+    margin: 0 auto;
+    color: #333;
+    font-size: large;
+    position:relative; right: 235px; top: 150px;
+    width: fit-content;
+    height: 600px;
+    background: linear-gradient(to right, #a84e2b, #8a3222, #c77955, #8a3222, #b37e6c);
+    border: 8px;
+    border-style: groove;
+    border-color: #7e2415
+  }
+  
+  
+  .piano {
+    display: flex;
+    width: max-content;
+  }
+  
+  .key {
+    height: calc(var(--width) * 4);
+    width: var(--width);
+    color: 4px solid #333;
+  }
+  
+  .white {
+    --width: 100px;
+    background-color: #fffffb;
+    border: 1px solid #333;
+    color: 4px solid #333;
+    text-size-adjust: 50px;
+  }
+  
+  .white.active {
+    background-color: #CCC;
+  }
+  
+  .black {
+    --width: 60px;
+    background-color: black;
+    margin-left: calc(var(--width) / -2);
+    margin-right: calc(var(--width) / -2);
+    z-index: 2;
+  }
+  
+  .black.active {
+    background-color: #333;
+  }
+
+  .key span {
+    display: block;
+    font-size: 18px;
+    text-align: center;
+    color: #7e2415;
+    text-shadow: 0px 0px 5px #000;
+  }
+  
+  
+  .second-key.white {
+    --width: 100px;
+    background-color: white;
+    border: 0.1px solid #333;
+    font-size: medium;
+  }
+
+  .second-key.white.active {
+    background-color: #CCC;
+  }
+
+  .second-key.black {
+    --width: 60px;
+    background-color: black;
+    margin-left: calc(var(--width) / -2);
+    margin-right: calc(var(--width) / -2);
+    z-index: 2;
+  }
+
+  .second-key.black.active {
+    background-color: #333;
+  }
+
+
+  /* const FIRST_WHITE_KEYS = ['z', 'x', 'c', 'v', 'b', 'n', 'm']
+const FIRST_BLACK_KEYS = ['s', 'd', 'g', 'h', 'j']
+const SECOND_WHITE_KEYS = ['t', 'y', 'u', 'i', 'o', 'p', '[']
+const SECOND_BLACK_KEYS = ['6', '7', '9', '0', '-']
